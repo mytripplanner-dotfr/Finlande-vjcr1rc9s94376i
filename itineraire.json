@@ -1,0 +1,367 @@
+{
+  "pays": "Finlande",
+  "drapeau": "🇫🇮",
+  "symbole": "❄️",
+  "titre": "L'Épopée Boréale: 15 Jours au Cœur de la Finlande Hivernale",
+  "budget_total": "5700€",
+  "duree": "15 jours",
+  "temps_vol": "25h depuis Lopes, Mozambique avec escales",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée en douceur à Helsinki",
+      "legende": "Après un long voyage, la capitale finlandaise vous accueille avec son charme hivernal. Prenez le temps de vous installer et de faire une première immersion tranquille dans l'ambiance nordique, en vous promenant le long des quais ou dans le centre-ville.",
+      "lieu": "Helsinki",
+      "activites": [
+        "🛬 <strong>Arrivée à Helsinki</strong>: Atterrissez à l'aéroport d'Helsinki-Vantaa (HEL) et rejoignez votre hôtel en centre-ville. Profitez de ce moment pour vous acclimater et vous reposer après le vol.",
+        "🚶‍♂️ <strong>Première balade découverte</strong>: Flânez dans les rues autour de votre hôtel, imprégnez-vous de l'atmosphère locale et repérez quelques cafés chaleureux pour une boisson chaude."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Transport aéroport",
+          "texte": "Le train Ring Rail Line relie l'aéroport au centre d'Helsinki en environ 30 minutes, c'est le moyen le plus simple et économique."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🏛️",
+      "titre": "Helsinki, entre design et histoire",
+      "legende": "Découvrez le cœur battant d'Helsinki, où l'architecture moderne côtoie les édifices historiques. Plongez dans la culture finlandaise à travers ses musées et son design emblématique, tout en profitant de l'ambiance sereine de la ville.",
+      "lieu": "Helsinki",
+      "activites": [
+        "⛪ <strong>Visite de la Cathédrale d'Helsinki et de la Place du Sénat</strong>: Admirez l'emblématique cathédrale luthérienne et l'ensemble néoclassique de la Place du Sénat, un chef-d'œuvre architectural qui domine le paysage urbain.",
+        "🛍️ <strong>Exploration du quartier du Design</strong>: Parcourez les boutiques et galeries du Design District, un quartier vibrant où l'innovation finlandaise en matière de design, de mode et d'art est mise à l'honneur."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Astuce culturelle",
+          "texte": "De nombreux musées proposent des entrées gratuites certains jours ou à certaines heures. Renseignez-vous sur les \"Happy Hours\" culturelles."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🏰",
+      "titre": "Forteresse maritime et sauna traditionnel",
+      "legende": "Aujourd'hui, explorez une forteresse maritime classée au patrimoine mondial de l'UNESCO, puis plongez dans l'expérience finlandaise par excellence: le sauna. Une journée contrastée entre histoire et détente profonde.",
+      "lieu": "Helsinki",
+      "activites": [
+        "🚢 <strong>Excursion à Suomenlinna</strong>: Prenez un court ferry pour cette forteresse insulaire historique. Promenez-vous sur ses remparts, explorez ses tunnels et découvrez son riche passé maritime.",
+        "🧖‍♀️ <strong>Expérience sauna public</strong>: Terminez la journée par un sauna finlandais traditionnel, comme le Löyly ou l'Allas Sea Pool, pour une immersion authentique dans la culture locale et une relaxation bien méritée."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🌡️",
+          "titre": "Sauna etiquette",
+          "texte": "Il est courant de se dévêtir dans les saunas publics séparés par sexe. N'hésitez pas à alterner chaleur intense et bain froid pour une expérience revigorante."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🎨",
+      "titre": "Art, marché et départ pour Turku",
+      "legende": "Profitez d'une dernière matinée à Helsinki pour découvrir son marché animé et son art moderne. Ensuite, embarquez pour un voyage pittoresque en train vers Turku, l'ancienne capitale, où l'histoire vous attend.",
+      "lieu": "Helsinki & Turku",
+      "activites": [
+        "🖼️ <strong>Visite du Kiasma ou d'Ateneum</strong>: Plongez dans l'art contemporain au Kiasma ou admirez les chefs-d'œuvre de l'art finlandais à l'Ateneum, deux musées majeurs d'Helsinki.",
+        "🚂 <strong>Voyage en train vers Turku</strong>: Prenez un train confortable pour Turku (environ 2h), la plus ancienne ville de Finlande. Installez-vous à votre hôtel et profitez d'une soirée tranquille."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🚆",
+          "titre": "Réservation de train",
+          "texte": "Il est conseillé de réserver vos billets de train à l'avance, surtout pour les trajets longue distance ou les périodes de pointe."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🏰",
+      "titre": "Turku, berceau de l'histoire finlandaise",
+      "legende": "Explorez Turku, une ville riche en histoire et en charme. De son château médiéval à sa cathédrale imposante, chaque coin de rue raconte une histoire. Flânez le long de la rivière Aura et imprégnez-vous de l'atmosphère paisible.",
+      "lieu": "Turku",
+      "activites": [
+        "👑 <strong>Découverte du Château de Turku</strong>: Visitez l'un des plus anciens bâtiments de Finlande, un château médiéval magnifiquement conservé qui a servi de forteresse et de résidence royale.",
+        "⛪ <strong>Exploration de la Cathédrale de Turku</strong>: Admirez la cathédrale nationale de Finlande, un monument gothique impressionnant et le siège de l'archevêque luthérien."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🚶‍♀️",
+          "titre": "Balade fluviale",
+          "texte": "La promenade le long de la rivière Aura est très agréable, bordée de cafés et de bateaux-restaurants (en saison)."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🏞️",
+      "titre": "Nature et retour vers la capitale",
+      "legende": "Profitez de la nature environnante de Turku avec une excursion matinale, puis reprenez le chemin d'Helsinki. Préparez-vous pour une aventure nocturne en train vers le Grand Nord, une expérience inoubliable.",
+      "lieu": "Turku & Train de nuit",
+      "activites": [
+        "🌳 <strong>Randonnée au Parc National de Kurjenrahka</strong>: Évadez-vous dans la nature finlandaise avec une randonnée facile dans ce parc national, connu pour ses tourbières et ses forêts paisibles.",
+        "🚂 <strong>Train de nuit pour Rovaniemi</strong>: Après être revenu à Helsinki, embarquez pour un train de nuit confortable vers Rovaniemi, la capitale de la Laponie. Profitez du paysage enneigé qui défile depuis votre couchette."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🛌",
+          "titre": "Confort du train de nuit",
+          "texte": "Les trains de nuit finlandais sont modernes et confortables, avec des compartiments privés et des wagons-restaurants. Réservez une cabine avec douche pour plus de commodité."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🎅",
+      "titre": "Rovaniemi, la magie de Noël",
+      "legende": "Bienvenue en Laponie! Aujourd'hui est dédié à la rencontre avec le Père Noël en personne. Plongez dans l'ambiance féerique du Cercle Arctique et laissez-vous émerveiller par la magie de Noël, même en dehors des fêtes.",
+      "lieu": "Rovaniemi",
+      "activites": [
+        "🎅 <strong>Visite du Village du Père Noël</strong>: Traversez le Cercle Arctique et rencontrez le Père Noël dans son bureau. Envoyez une carte postale depuis le bureau de poste officiel et explorez les boutiques d'artisanat.",
+        "🦌 <strong>Rencontre avec les rennes</strong>: Profitez d'une courte balade en traîneau à rennes autour du Village du Père Noël, une expérience paisible et emblématique de la Laponie."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "📍",
+          "titre": "Cercle Arctique",
+          "texte": "Le Village du Père Noël est situé directement sur la ligne du Cercle Arctique, un endroit idéal pour prendre des photos mémorables."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🐕",
+      "titre": "Aventure en traîneau à chiens et aurores boréales",
+      "legende": "Vivez une journée d'aventure inoubliable au cœur de la nature lapone. Glissez sur la neige tiré par des huskies énergiques, puis, si la chance est de votre côté, admirez le spectacle céleste des aurores boréales.",
+      "lieu": "Rovaniemi",
+      "activites": [
+        "🐶 <strong>Safari en traîneau à huskies</strong>: Conduisez votre propre attelage de chiens de traîneau à travers les forêts enneigées. C'est une expérience grisante et authentique de la vie arctique.",
+        "🌌 <strong>Chasse aux aurores boréales</strong>: Participez à une excursion guidée pour observer les aurores boréales. Loin de la pollution lumineuse, augmentez vos chances d'assister à ce phénomène naturel spectaculaire."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "🧥",
+          "titre": "Vêtements chauds",
+          "texte": "En Laponie, les températures peuvent être très basses. Prévoyez plusieurs couches de vêtements thermiques, une combinaison de ski, des gants et un bonnet."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🧊",
+      "titre": "Musée arctique et culture Sami",
+      "legende": "Plongez dans la culture et l'histoire de l'Arctique au musée Arktikum, puis découvrez la richesse de la culture Sami, le peuple autochtone de Laponie. Une journée d'apprentissage et de découverte fascinante.",
+      "lieu": "Rovaniemi",
+      "activites": [
+        "🏛️ <strong>Visite de l'Arktikum</strong>: Explorez ce musée et centre scientifique qui présente la nature, la culture et l'histoire de l'Arctique, ainsi que la vie des peuples du Nord.",
+        "🍲 <strong>Déjeuner traditionnel lapon</strong>: Dégustez des spécialités locales comme le ragoût de renne ou le saumon flambé dans un restaurant typique, pour une immersion gustative."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "📚",
+          "titre": "Culture Sami",
+          "texte": "Les Samis sont le seul peuple autochtone d'Europe. Leur culture est riche et unique, et l'Arktikum offre un excellent aperçu de leur histoire et de leurs traditions."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "✈️",
+      "titre": "Retour vers le sud",
+      "legende": "Après ces jours magiques en Laponie, il est temps de reprendre un vol vers Helsinki. Profitez du voyage pour vous remémorer vos aventures arctiques et vous préparer à redécouvrir la capitale sous un autre angle.",
+      "lieu": "Rovaniemi & Helsinki",
+      "activites": [
+        "✈️ <strong>Vol Rovaniemi-Helsinki</strong>: Prenez un vol intérieur pour retourner à Helsinki (environ 1h15). C'est le moyen le plus rapide pour revenir dans le sud de la Finlande.",
+        "🚶‍♀️ <strong>Soirée libre à Helsinki</strong>: Après l'installation à l'hôtel, profitez d'une soirée tranquille pour dîner dans un quartier que vous n'avez pas encore exploré ou simplement vous détendre."
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Flexibilité",
+          "texte": "Les vols intérieurs sont fréquents et peuvent être réservés à l'avance pour de meilleurs tarifs. Pensez à vérifier les compagnies comme Finnair ou Norwegian."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🌲",
+      "titre": "Évasion nature au Parc National de Nuuksio",
+      "legende": "Échappez à l'agitation urbaine pour une journée d'immersion dans la nature finlandaise. Le Parc National de Nuuksio offre des paysages de forêts, de lacs et de rochers, parfaits pour une randonnée revigorante et un bol d'air frais.",
+      "lieu": "Helsinki (excursion à Nuuksio)",
+      "activites": [
+        "🚌 <strong>Excursion au Parc National de Nuuksio</strong>: Prenez un bus depuis Helsinki pour rejoindre ce magnifique parc national. Profitez d'une randonnée sur des sentiers balisés, à travers des forêts denses et le long de lacs gelés.",
+        "🐿️ <strong>Visite du Centre Naturel Haltia</strong>: Découvrez le centre d'information Haltia, une merveille architecturale en bois, qui présente la nature finlandaise et offre des expositions interactives."
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "👟",
+          "titre": "Chaussures adaptées",
+          "texte": "Prévoyez des chaussures de marche confortables et imperméables, surtout en hiver où les sentiers peuvent être enneigés ou verglacés."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "🛍️",
+      "titre": "Shopping et délices culinaires",
+      "legende": "Profitez de cette journée pour explorer les marchés locaux, faire du shopping de souvenirs ou de design finlandais, et savourer les délices culinaires de la capitale. Une journée plus détendue pour apprécier les plaisirs simples.",
+      "lieu": "Helsinki",
+      "activites": [
+        "🛒 <strong>Marché couvert de Hakaniemi ou Old Market Hall</strong>: Flânez dans ces marchés historiques pour découvrir des produits locaux, des spécialités finlandaises et des objets d'artisanat. Idéal pour un déjeuner rapide et savoureux.",
+        "🎁 <strong>Shopping de souvenirs et design</strong>: Explorez les boutiques du centre-ville pour trouver des articles de design finlandais (Marimekko, Iittala) ou des souvenirs uniques à rapporter chez vous."
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": "🍽️",
+          "titre": "Spécialités locales",
+          "texte": "Goûtez au \"Karjalanpiirakka\" (chausson carélien) ou au \"Lohikeitto\" (soupe au saumon) pour une expérience culinaire authentique."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "⛪",
+      "titre": "Architecture unique et détente",
+      "legende": "Découvrez des joyaux architecturaux uniques à Helsinki, comme l'église creusée dans la roche et la chapelle du silence. Profitez de l'après-midi pour une dernière immersion dans l'ambiance de la ville ou pour vous détendre avant le départ.",
+      "lieu": "Helsinki",
+      "activites": [
+        "⛪ <strong>Visite de l'Église Temppeliaukio (Église de la Roche)</strong>: Admirez cette église unique, creusée directement dans la roche, réputée pour son acoustique exceptionnelle et son architecture audacieuse.",
+        "🧘‍♀️ <strong>Moment de calme à la Chapelle du Silence Kamppi</strong>: Faites une pause dans cette chapelle en bois, un havre de paix au cœur de la ville, conçu pour la méditation et le recueillement."
+      ],
+      "illustration": "jour13.jpg",
+      "encarts": [
+        {
+          "symbole": "🎶",
+          "titre": "Concerts",
+          "texte": "L'Église de la Roche accueille souvent des concerts grâce à son acoustique remarquable. Vérifiez le programme si vous êtes intéressé."
+        }
+      ]
+    },
+    {
+      "jour": 14,
+      "symbole": "🚢",
+      "titre": "Archipel d'Helsinki ou Porvoo",
+      "legende": "Pour cette avant-dernière journée, choisissez entre une exploration de l'archipel d'Helsinki, même en hiver, ou une charmante excursion dans la vieille ville de Porvoo. Une dernière touche de beauté finlandaise avant le départ.",
+      "lieu": "Helsinki (excursion à Porvoo ou archipel)",
+      "activites": [
+        "🏘️ <strong>Excursion à Porvoo</strong>: Visitez la deuxième plus ancienne ville de Finlande, célèbre pour ses maisons en bois colorées le long de la rivière et ses ruelles pavées. Une escapade pittoresque et pleine de charme.",
+        "🛥️ <strong>Croisière hivernale dans l'archipel (si disponible)</strong>: Si les conditions le permettent, une croisière dans l'archipel gelé d'Helsinki offre des vues spectaculaires sur les îles enneigées et la côte."
+      ],
+      "illustration": "jour14.jpg",
+      "encarts": [
+        {
+          "symbole": "🚌",
+          "titre": "Transport vers Porvoo",
+          "texte": "Des bus réguliers relient Helsinki à Porvoo en environ une heure, offrant un moyen facile de visiter cette ville historique."
+        }
+      ]
+    },
+    {
+      "jour": 15,
+      "symbole": "🛫",
+      "titre": "Départ d'Helsinki",
+      "legende": "C'est le dernier jour de votre aventure finlandaise. Profitez d'un dernier petit-déjeuner nordique, faites quelques emplettes de dernière minute si le temps le permet, puis dirigez-vous vers l'aéroport pour votre vol retour, la tête pleine de souvenirs boréaux.",
+      "lieu": "Helsinki",
+      "activites": [
+        "☕ <strong>Dernier petit-déjeuner finlandais</strong>: Savourez un dernier petit-déjeuner typique avec du pain de seigle, du poisson fumé et du café finlandais.",
+        "🛫 <strong>Départ d'Helsinki</strong>: Rejoignez l'aéroport d'Helsinki-Vantaa (HEL) pour votre vol retour vers Lopes, Mozambique, emportant avec vous la magie de la Finlande."
+      ],
+      "illustration": "jour15.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Heure de départ",
+          "texte": "Prévoyez suffisamment de temps pour le trajet vers l'aéroport et les formalités d'enregistrement, surtout si votre vol est tôt le matin."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "2000€/pers (Vol aller-retour Lopes-Helsinki en classe économique avec escales)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "400€/pers (Trains Helsinki-Turku, train de nuit Helsinki-Rovaniemi, vol Rovaniemi-Helsinki, transports locaux)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "900€/pers (15 jours à 60€/jour en moyenne, incluant petits-déjeuners, déjeuners et dîners)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "1750€/pers (14 nuits en hôtels 3 étoiles, base 125€/nuit)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "650€/pers (Musées, sauna, Village du Père Noël, safari husky, chasse aux aurores boréales, excursions)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de Décembre à Février pour profiter pleinement de la neige, des aurores boréales et de l'ambiance de Noël en Laponie.",
+      "symbole": "❄️"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "Les Finlandais sont connus pour leur nature calme et réservée, mais sont très accueillants une fois le contact établi. Un simple \"Hei\" (bonjour) est apprécié.",
+      "symbole": "🗣️"
+    },
+    {
+      "titre": "La Finlande est le pays des mille lacs et des forêts. La nature est omniprésente et très respectée. Le droit de tout un chacun d'accéder à la nature est fondamental.",
+      "symbole": "🌲"
+    },
+    {
+      "titre": "Le sauna est une institution nationale, avec plus de 3 millions de saunas pour 5,5 millions d'habitants. C'est un lieu de détente et de socialisation essentiel.",
+      "symbole": "🧖‍♀️"
+    },
+    {
+      "titre": "La monnaie est l'Euro (€). Les cartes de crédit sont largement acceptées, même pour de petits montants. Le pourboire n'est pas obligatoire mais apprécié.",
+      "symbole": "💳"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations touristiques officielles sur la Finlande",
+      "titre": "Visit Finland",
+      "url": "https://www.visitfinland.com/fr/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Horaires et réservations des trains finlandais",
+      "titre": "VR (Chemins de fer finlandais)",
+      "url": "https://www.vr.fi/en",
+      "symbole": "🚆"
+    },
+    {
+      "legende": "Prévisions météo fiables pour la Finlande",
+      "titre": "Météo finlandaise (FMI)",
+      "url": "https://en.ilmatieteenlaitos.fi/",
+      "symbole": "🌤️"
+    }
+  ]
+}
