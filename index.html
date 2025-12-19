@@ -1,0 +1,639 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Épopée Boréale: 15 Jours au Cœur de la Finlande Hivernale </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée en douceur à Helsinki</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Helsinki, entre design et histoire</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Forteresse maritime et sauna traditionnel</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Art, marché et départ pour Turku</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Turku, berceau de l'histoire finlandaise</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Nature et retour vers la capitale</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Rovaniemi, la magie de Noël</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Aventure en traîneau à chiens et aurores boréales</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Musée arctique et culture Sami</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Retour vers le sud</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Évasion nature au Parc National de Nuuksio</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Shopping et délices culinaires</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Architecture unique et détente</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Archipel d'Helsinki ou Porvoo</a>
+            
+                <a href="#jour-15" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J15 Départ d'Helsinki</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">FINLANDE</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">L'Épopée Boréale: 15 Jours au Cœur de la Finlande Hivernale</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 15 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 5700€</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 25h depuis Lopes, Mozambique avec escales</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée en douceur à Helsinki</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage, la capitale finlandaise vous accueille avec son charme hivernal. Prenez le temps de vous installer et de faire une première immersion tranquille dans l'ambiance nordique, en vous promenant le long des quais ou dans le centre-ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée à Helsinki</strong>: Atterrissez à l'aéroport d'Helsinki-Vantaa (HEL) et rejoignez votre hôtel en centre-ville. Profitez de ce moment pour vous acclimater et vous reposer après le vol.</li><li>🚶‍♂️ <strong>Première balade découverte</strong>: Flânez dans les rues autour de votre hôtel, imprégnez-vous de l'atmosphère locale et repérez quelques cafés chaleureux pour une boisson chaude.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Transport aéroport</p>
+                                <p class="text-gray-700">Le train Ring Rail Line relie l'aéroport au centre d'Helsinki en environ 30 minutes, c'est le moyen le plus simple et économique.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Helsinki, entre design et histoire</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez le cœur battant d'Helsinki, où l'architecture moderne côtoie les édifices historiques. Plongez dans la culture finlandaise à travers ses musées et son design emblématique, tout en profitant de l'ambiance sereine de la ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>⛪ <strong>Visite de la Cathédrale d'Helsinki et de la Place du Sénat</strong>: Admirez l'emblématique cathédrale luthérienne et l'ensemble néoclassique de la Place du Sénat, un chef-d'œuvre architectural qui domine le paysage urbain.</li><li>🛍️ <strong>Exploration du quartier du Design</strong>: Parcourez les boutiques et galeries du Design District, un quartier vibrant où l'innovation finlandaise en matière de design, de mode et d'art est mise à l'honneur.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Astuce culturelle</p>
+                                <p class="text-gray-700">De nombreux musées proposent des entrées gratuites certains jours ou à certaines heures. Renseignez-vous sur les "Happy Hours" culturelles.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Forteresse maritime et sauna traditionnel</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, explorez une forteresse maritime classée au patrimoine mondial de l'UNESCO, puis plongez dans l'expérience finlandaise par excellence: le sauna. Une journée contrastée entre histoire et détente profonde.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚢 <strong>Excursion à Suomenlinna</strong>: Prenez un court ferry pour cette forteresse insulaire historique. Promenez-vous sur ses remparts, explorez ses tunnels et découvrez son riche passé maritime.</li><li>🧖‍♀️ <strong>Expérience sauna public</strong>: Terminez la journée par un sauna finlandais traditionnel, comme le Löyly ou l'Allas Sea Pool, pour une immersion authentique dans la culture locale et une relaxation bien méritée.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌡️ Sauna etiquette</p>
+                                <p class="text-gray-700">Il est courant de se dévêtir dans les saunas publics séparés par sexe. N'hésitez pas à alterner chaleur intense et bain froid pour une expérience revigorante.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Art, marché et départ pour Turku</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d'une dernière matinée à Helsinki pour découvrir son marché animé et son art moderne. Ensuite, embarquez pour un voyage pittoresque en train vers Turku, l'ancienne capitale, où l'histoire vous attend.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🖼️ <strong>Visite du Kiasma ou d'Ateneum</strong>: Plongez dans l'art contemporain au Kiasma ou admirez les chefs-d'œuvre de l'art finlandais à l'Ateneum, deux musées majeurs d'Helsinki.</li><li>🚂 <strong>Voyage en train vers Turku</strong>: Prenez un train confortable pour Turku (environ 2h), la plus ancienne ville de Finlande. Installez-vous à votre hôtel et profitez d'une soirée tranquille.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚆 Réservation de train</p>
+                                <p class="text-gray-700">Il est conseillé de réserver vos billets de train à l'avance, surtout pour les trajets longue distance ou les périodes de pointe.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Turku, berceau de l'histoire finlandaise</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez Turku, une ville riche en histoire et en charme. De son château médiéval à sa cathédrale imposante, chaque coin de rue raconte une histoire. Flânez le long de la rivière Aura et imprégnez-vous de l'atmosphère paisible.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>👑 <strong>Découverte du Château de Turku</strong>: Visitez l'un des plus anciens bâtiments de Finlande, un château médiéval magnifiquement conservé qui a servi de forteresse et de résidence royale.</li><li>⛪ <strong>Exploration de la Cathédrale de Turku</strong>: Admirez la cathédrale nationale de Finlande, un monument gothique impressionnant et le siège de l'archevêque luthérien.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♀️ Balade fluviale</p>
+                                <p class="text-gray-700">La promenade le long de la rivière Aura est très agréable, bordée de cafés et de bateaux-restaurants (en saison).</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Nature et retour vers la capitale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de la nature environnante de Turku avec une excursion matinale, puis reprenez le chemin d'Helsinki. Préparez-vous pour une aventure nocturne en train vers le Grand Nord, une expérience inoubliable.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🌳 <strong>Randonnée au Parc National de Kurjenrahka</strong>: Évadez-vous dans la nature finlandaise avec une randonnée facile dans ce parc national, connu pour ses tourbières et ses forêts paisibles.</li><li>🚂 <strong>Train de nuit pour Rovaniemi</strong>: Après être revenu à Helsinki, embarquez pour un train de nuit confortable vers Rovaniemi, la capitale de la Laponie. Profitez du paysage enneigé qui défile depuis votre couchette.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛌 Confort du train de nuit</p>
+                                <p class="text-gray-700">Les trains de nuit finlandais sont modernes et confortables, avec des compartiments privés et des wagons-restaurants. Réservez une cabine avec douche pour plus de commodité.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Rovaniemi, la magie de Noël</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Bienvenue en Laponie! Aujourd'hui est dédié à la rencontre avec le Père Noël en personne. Plongez dans l'ambiance féerique du Cercle Arctique et laissez-vous émerveiller par la magie de Noël, même en dehors des fêtes.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🎅 <strong>Visite du Village du Père Noël</strong>: Traversez le Cercle Arctique et rencontrez le Père Noël dans son bureau. Envoyez une carte postale depuis le bureau de poste officiel et explorez les boutiques d'artisanat.</li><li>🦌 <strong>Rencontre avec les rennes</strong>: Profitez d'une courte balade en traîneau à rennes autour du Village du Père Noël, une expérience paisible et emblématique de la Laponie.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📍 Cercle Arctique</p>
+                                <p class="text-gray-700">Le Village du Père Noël est situé directement sur la ligne du Cercle Arctique, un endroit idéal pour prendre des photos mémorables.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Aventure en traîneau à chiens et aurores boréales</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Vivez une journée d'aventure inoubliable au cœur de la nature lapone. Glissez sur la neige tiré par des huskies énergiques, puis, si la chance est de votre côté, admirez le spectacle céleste des aurores boréales.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🐶 <strong>Safari en traîneau à huskies</strong>: Conduisez votre propre attelage de chiens de traîneau à travers les forêts enneigées. C'est une expérience grisante et authentique de la vie arctique.</li><li>🌌 <strong>Chasse aux aurores boréales</strong>: Participez à une excursion guidée pour observer les aurores boréales. Loin de la pollution lumineuse, augmentez vos chances d'assister à ce phénomène naturel spectaculaire.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧥 Vêtements chauds</p>
+                                <p class="text-gray-700">En Laponie, les températures peuvent être très basses. Prévoyez plusieurs couches de vêtements thermiques, une combinaison de ski, des gants et un bonnet.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Musée arctique et culture Sami</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez dans la culture et l'histoire de l'Arctique au musée Arktikum, puis découvrez la richesse de la culture Sami, le peuple autochtone de Laponie. Une journée d'apprentissage et de découverte fascinante.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏛️ <strong>Visite de l'Arktikum</strong>: Explorez ce musée et centre scientifique qui présente la nature, la culture et l'histoire de l'Arctique, ainsi que la vie des peuples du Nord.</li><li>🍲 <strong>Déjeuner traditionnel lapon</strong>: Dégustez des spécialités locales comme le ragoût de renne ou le saumon flambé dans un restaurant typique, pour une immersion gustative.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📚 Culture Sami</p>
+                                <p class="text-gray-700">Les Samis sont le seul peuple autochtone d'Europe. Leur culture est riche et unique, et l'Arktikum offre un excellent aperçu de leur histoire et de leurs traditions.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour vers le sud</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après ces jours magiques en Laponie, il est temps de reprendre un vol vers Helsinki. Profitez du voyage pour vous remémorer vos aventures arctiques et vous préparer à redécouvrir la capitale sous un autre angle.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>✈️ <strong>Vol Rovaniemi-Helsinki</strong>: Prenez un vol intérieur pour retourner à Helsinki (environ 1h15). C'est le moyen le plus rapide pour revenir dans le sud de la Finlande.</li><li>🚶‍♀️ <strong>Soirée libre à Helsinki</strong>: Après l'installation à l'hôtel, profitez d'une soirée tranquille pour dîner dans un quartier que vous n'avez pas encore exploré ou simplement vous détendre.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Flexibilité</p>
+                                <p class="text-gray-700">Les vols intérieurs sont fréquents et peuvent être réservés à l'avance pour de meilleurs tarifs. Pensez à vérifier les compagnies comme Finnair ou Norwegian.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Évasion nature au Parc National de Nuuksio</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Échappez à l'agitation urbaine pour une journée d'immersion dans la nature finlandaise. Le Parc National de Nuuksio offre des paysages de forêts, de lacs et de rochers, parfaits pour une randonnée revigorante et un bol d'air frais.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚌 <strong>Excursion au Parc National de Nuuksio</strong>: Prenez un bus depuis Helsinki pour rejoindre ce magnifique parc national. Profitez d'une randonnée sur des sentiers balisés, à travers des forêts denses et le long de lacs gelés.</li><li>🐿️ <strong>Visite du Centre Naturel Haltia</strong>: Découvrez le centre d'information Haltia, une merveille architecturale en bois, qui présente la nature finlandaise et offre des expositions interactives.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👟 Chaussures adaptées</p>
+                                <p class="text-gray-700">Prévoyez des chaussures de marche confortables et imperméables, surtout en hiver où les sentiers peuvent être enneigés ou verglacés.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Shopping et délices culinaires</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de cette journée pour explorer les marchés locaux, faire du shopping de souvenirs ou de design finlandais, et savourer les délices culinaires de la capitale. Une journée plus détendue pour apprécier les plaisirs simples.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛒 <strong>Marché couvert de Hakaniemi ou Old Market Hall</strong>: Flânez dans ces marchés historiques pour découvrir des produits locaux, des spécialités finlandaises et des objets d'artisanat. Idéal pour un déjeuner rapide et savoureux.</li><li>🎁 <strong>Shopping de souvenirs et design</strong>: Explorez les boutiques du centre-ville pour trouver des articles de design finlandais (Marimekko, Iittala) ou des souvenirs uniques à rapporter chez vous.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Spécialités locales</p>
+                                <p class="text-gray-700">Goûtez au "Karjalanpiirakka" (chausson carélien) ou au "Lohikeitto" (soupe au saumon) pour une expérience culinaire authentique.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Architecture unique et détente</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez des joyaux architecturaux uniques à Helsinki, comme l'église creusée dans la roche et la chapelle du silence. Profitez de l'après-midi pour une dernière immersion dans l'ambiance de la ville ou pour vous détendre avant le départ.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>⛪ <strong>Visite de l'Église Temppeliaukio (Église de la Roche)</strong>: Admirez cette église unique, creusée directement dans la roche, réputée pour son acoustique exceptionnelle et son architecture audacieuse.</li><li>🧘‍♀️ <strong>Moment de calme à la Chapelle du Silence Kamppi</strong>: Faites une pause dans cette chapelle en bois, un havre de paix au cœur de la ville, conçu pour la méditation et le recueillement.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎶 Concerts</p>
+                                <p class="text-gray-700">L'Église de la Roche accueille souvent des concerts grâce à son acoustique remarquable. Vérifiez le programme si vous êtes intéressé.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Archipel d'Helsinki ou Porvoo</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Pour cette avant-dernière journée, choisissez entre une exploration de l'archipel d'Helsinki, même en hiver, ou une charmante excursion dans la vieille ville de Porvoo. Une dernière touche de beauté finlandaise avant le départ.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏘️ <strong>Excursion à Porvoo</strong>: Visitez la deuxième plus ancienne ville de Finlande, célèbre pour ses maisons en bois colorées le long de la rivière et ses ruelles pavées. Une escapade pittoresque et pleine de charme.</li><li>🛥️ <strong>Croisière hivernale dans l'archipel (si disponible)</strong>: Si les conditions le permettent, une croisière dans l'archipel gelé d'Helsinki offre des vues spectaculaires sur les îles enneigées et la côte.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚌 Transport vers Porvoo</p>
+                                <p class="text-gray-700">Des bus réguliers relient Helsinki à Porvoo en environ une heure, offrant un moyen facile de visiter cette ville historique.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-15" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 15</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ d'Helsinki</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le dernier jour de votre aventure finlandaise. Profitez d'un dernier petit-déjeuner nordique, faites quelques emplettes de dernière minute si le temps le permet, puis dirigez-vous vers l'aéroport pour votre vol retour, la tête pleine de souvenirs boréaux.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>☕ <strong>Dernier petit-déjeuner finlandais</strong>: Savourez un dernier petit-déjeuner typique avec du pain de seigle, du poisson fumé et du café finlandais.</li><li>🛫 <strong>Départ d'Helsinki</strong>: Rejoignez l'aéroport d'Helsinki-Vantaa (HEL) pour votre vol retour vers Lopes, Mozambique, emportant avec vous la magie de la Finlande.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Finlande-vjcr1rc9s94376i/main/jour15.jpg" class="w-full h-64 object-cover" alt="Jour 15">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Heure de départ</p>
+                                <p class="text-gray-700">Prévoyez suffisamment de temps pour le trajet vers l'aéroport et les formalités d'enregistrement, surtout si votre vol est tôt le matin.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>2000€/pers (Vol aller-retour Lopes-Helsinki en classe économique avec escales)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>400€/pers (Trains Helsinki-Turku, train de nuit Helsinki-Rovaniemi, vol Rovaniemi-Helsinki, transports locaux)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>900€/pers (15 jours à 60€/jour en moyenne, incluant petits-déjeuners, déjeuners et dîners)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>1750€/pers (14 nuits en hôtels 3 étoiles, base 125€/nuit)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>650€/pers (Musées, sauna, Village du Père Noël, safari husky, chasse aux aurores boréales, excursions)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois de Décembre à Février pour profiter pleinement de la neige, des aurores boréales et de l'ambiance de Noël en Laponie.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🗣️ Les Finlandais sont connus pour leur nature calme et réservée, mais sont très accueillants une fois le contact établi. Un simple "Hei" (bonjour) est apprécié.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🌲 La Finlande est le pays des mille lacs et des forêts. La nature est omniprésente et très respectée. Le droit de tout un chacun d'accéder à la nature est fondamental.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🧖‍♀️ Le sauna est une institution nationale, avec plus de 3 millions de saunas pour 5,5 millions d'habitants. C'est un lieu de détente et de socialisation essentiel.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💳 La monnaie est l'Euro (€). Les cartes de crédit sont largement acceptées, même pour de petits montants. Le pourboire n'est pas obligatoire mais apprécié.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Finlande-vjcr1rc9s94376i/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.visitfinland.com/fr/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Visit Finland</strong></a></li>
+                    
+                        <li><a href="https://www.vr.fi/en" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🚆 VR (Chemins de fer finlandais)</strong></a></li>
+                    
+                        <li><a href="https://en.ilmatieteenlaitos.fi/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Météo finlandaise (FMI)</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
